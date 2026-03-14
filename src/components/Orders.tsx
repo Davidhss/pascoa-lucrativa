@@ -22,8 +22,8 @@ import {
   AlertCircle,
   TrendingUp,
   Target,
-  WhatsApp,
-  Settings
+  Settings,
+  ArrowRight
 } from 'lucide-react';
 import { Order, Recipe, OrderStatus, PaymentStatus } from '../types';
 import { formatCurrency, cn } from '../lib/utils';
@@ -151,7 +151,8 @@ export function Orders({
   const counts = getStatusCount();
 
   return (
-    <div className="space-y-6 lg:space-y-8 pb-24">
+    <>
+      <div className="space-y-6 lg:space-y-8 pb-24">
       {/* Header com CTA Clara */}
       <header className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="space-y-2">
@@ -365,7 +366,7 @@ export function Orders({
                       className="p-2 bg-green-50 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all"
                       title="Contato WhatsApp"
                     >
-                      <WhatsApp size={16} />
+                      <MessageCircle size={16} />
                     </motion.button>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
@@ -736,7 +737,7 @@ export function Orders({
                 onClick={() => sendWhatsApp(selectedOrder)}
                 className="flex-1 py-4 bg-green-600 text-white rounded-xl font-bold uppercase tracking-widest hover:bg-green-700 transition-all flex items-center justify-center gap-2 text-sm lg:text-base"
               >
-                <WhatsApp size={20} />
+                <MessageCircle size={20} />
                 Contato WhatsApp
               </motion.button>
 
@@ -759,5 +760,6 @@ export function Orders({
         </div>
       )}
     </AnimatePresence>
+    </>
   );
 }
