@@ -9,6 +9,7 @@ import { Pricing } from './components/Pricing';
 import { MenuCreator } from './components/MenuCreator';
 import { Marketing } from './components/Marketing';
 import { Auth } from './components/Auth';
+import { Admin } from './components/Admin';
 import { Recipe, Order, Cost, UserSettings, OrderStatus, PaymentStatus } from './types';
 import { RECIPES } from './data/recipes';
 import { motion, AnimatePresence } from 'motion/react';
@@ -20,6 +21,7 @@ const STORAGE_KEY = 'pascoa_lucrativa_data';
 export default function App() {
   const [session, setSession] = useState<any>(null);
   const [authLoading, setAuthLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [settings, setSettings] = useState<UserSettings>({
     confectioneryName: '',
@@ -168,7 +170,16 @@ export default function App() {
   }
 
   if (!session) {
-    return <Auth onAuthSuccess={() => showToast('Bem-vinda de volta!')} />;
+    return (
+      <Auth
+        onAuthSuccess={() => showToast('Bem-vinda de volta!')}
+        onAdminAccess={() => setIsAdmin(true)}
+      />
+    );
+  }
+
+  if (isAdmin) {
+    return <Admin onLogout={() => setIsAdmin(false)} />;
   }
 
   if (!settings.onboarded) {

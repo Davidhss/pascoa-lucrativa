@@ -121,75 +121,75 @@ export function Finance({
   };
 
   return (
-    <div className="space-y-10 pb-20">
+    <div className="space-y-8 lg:space-y-10 pb-20">
       {/* Editorial Header */}
-      <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 lg:gap-6">
         <div className="space-y-2">
-          <h2 className="text-4xl md:text-6xl font-serif italic font-light tracking-tight text-chocolate">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif italic font-light tracking-tight text-chocolate">
             Seu <span className="font-bold not-italic">Financeiro</span>
           </h2>
-          <p className="text-gold-dark font-black uppercase tracking-[0.3em] text-xs">
+          <p className="text-gold-dark font-black uppercase tracking-[0.2em] lg:tracking-[0.3em] text-xs">
             Visão clara dos seus lucros e investimentos
           </p>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row gap-3">
-          <button 
+          <button
             onClick={exportPDF}
-            className="px-6 py-4 bg-paper text-chocolate rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-chocolate hover:text-white transition-all flex items-center justify-center gap-2"
+            className="px-5 lg:px-6 py-3 lg:py-4 bg-paper text-chocolate rounded-xl lg:rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-chocolate hover:text-white transition-all flex items-center justify-center gap-2 text-sm lg:text-base"
           >
-            <Download size={18} /> Exportar PDF
+            <Download size={16} lg:size={18} /> Exportar PDF
           </button>
-          <div className="flex items-center gap-4 bg-paper px-6 py-4 rounded-3xl border border-chocolate/5">
-            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold">
-              <Target size={20} />
+          <div className="flex items-center gap-3 lg:gap-4 bg-paper px-4 lg:px-6 py-3 lg:py-4 rounded-2xl lg:rounded-3xl border border-chocolate/5">
+            <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+              <Target size={16} lg:size={20} />
             </div>
             <div>
-              <p className="text-[10px] font-black text-chocolate/30 uppercase tracking-widest leading-none">Meta</p>
-              <p className="text-lg font-black text-chocolate">{formatCurrency(settings.revenueGoal)}</p>
+              <p className="text-[9px] lg:text-[10px] font-black text-chocolate/50 uppercase tracking-widest leading-none">Meta</p>
+              <p className="text-base lg:text-lg font-black text-chocolate">{formatCurrency(settings.revenueGoal)}</p>
             </div>
           </div>
         </div>
       </header>
 
       {/* Bento Grid Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
         {/* Main Profit Card */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:col-span-2 bg-chocolate rounded-[48px] p-10 text-white relative overflow-hidden shadow-2xl shadow-chocolate/20"
+          className="md:col-span-2 bg-chocolate rounded-3xl p-6 lg:p-10 text-white relative overflow-hidden shadow-2xl shadow-chocolate/20"
         >
-          <div className="relative z-10 flex flex-col h-full justify-between gap-10">
+          <div className="relative z-10 flex flex-col h-full justify-between gap-6 lg:gap-10">
             <div className="flex items-start justify-between">
               <div className="space-y-1">
-                <p className="text-xs font-black text-white/40 uppercase tracking-[0.2em]">Lucro Líquido Estimado</p>
-                <h3 className="text-5xl md:text-7xl font-black tracking-tighter">{formatCurrency(profit)}</h3>
+                <p className="text-[10px] lg:text-xs font-black text-white/60 uppercase tracking-[0.15em] lg:tracking-[0.2em]">Lucro Líquido Estimado</p>
+                <h3 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter">{formatCurrency(profit)}</h3>
               </div>
-              <div className="w-16 h-16 rounded-3xl bg-white/10 backdrop-blur-md flex items-center justify-center">
-                <TrendingUp size={32} className="text-gold" />
+              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl lg:rounded-3xl bg-white/10 backdrop-blur-md flex items-center justify-center">
+                <TrendingUp size={24} lg:size={32} className="text-gold" />
               </div>
             </div>
-            
-            <div className="flex flex-wrap gap-8">
+
+            <div className="flex flex-wrap gap-4 lg:gap-8">
               <div className="space-y-1">
-                <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Margem de Lucro</p>
-                <p className="text-2xl font-black text-gold">{profitMargin.toFixed(1)}%</p>
+                <p className="text-[9px] lg:text-[10px] font-black text-white/60 uppercase tracking-widest">Margem de Lucro</p>
+                <p className="text-xl lg:text-2xl font-black text-gold">{profitMargin.toFixed(1)}%</p>
               </div>
               <div className="space-y-1">
-                <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Faturamento</p>
-                <p className="text-2xl font-black">{formatCurrency(totalRevenue)}</p>
+                <p className="text-[9px] lg:text-[10px] font-black text-white/60 uppercase tracking-widest">Faturamento</p>
+                <p className="text-xl lg:text-2xl font-black">{formatCurrency(totalRevenue)}</p>
               </div>
               <div className="space-y-1">
-                <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Custos Totais</p>
-                <p className="text-2xl font-black text-white/60">{formatCurrency(totalCosts)}</p>
+                <p className="text-[9px] lg:text-[10px] font-black text-white/60 uppercase tracking-widest">Custos Totais</p>
+                <p className="text-xl lg:text-2xl font-black text-white/70">{formatCurrency(totalCosts)}</p>
               </div>
             </div>
           </div>
-          
+
           {/* Decorative Elements */}
-          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-gold/10 rounded-full blur-3xl" />
-          <div className="absolute -left-20 -top-20 w-60 h-60 bg-white/5 rounded-full blur-2xl" />
+          <div className="absolute -right-16 -bottom-16 lg:-right-20 lg:-bottom-20 w-48 h-48 lg:w-80 lg:h-80 bg-gold/10 rounded-full blur-3xl" />
+          <div className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 w-40 h-40 lg:w-60 lg:h-60 bg-white/5 rounded-full blur-2xl" />
         </motion.div>
 
         {/* Distribution Card */}

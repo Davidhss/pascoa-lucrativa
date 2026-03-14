@@ -55,3 +55,29 @@ export interface UserSettings {
   revenueGoal: number;
   onboarded: boolean;
 }
+
+export interface UserProfile {
+  id: string;
+  email: string;
+  full_name?: string;
+  confectionery_name?: string;
+  created_at: string;
+  last_sign_in_at?: string;
+  user_metadata?: {
+    full_name?: string;
+    confectionery_name?: string;
+  };
+}
+
+export interface UserStats {
+  totalUsers: number;
+  activeUsers: number;
+  totalOrders: number;
+  totalRevenue: number;
+}
+
+export interface AdminUserManagement {
+  users: UserProfile[];
+  selectedUser: UserProfile | null;
+  stats: UserStats;
+}
