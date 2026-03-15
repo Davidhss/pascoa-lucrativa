@@ -29,16 +29,16 @@
 
   /* Melhorar contraste para textos pequenos */
   .text-chocolate\/30, .text-chocolate\/40, .text-chocolate\/50 {
-    @apply text-chocolate\/60;
+    @apply text-chocolate/60;
   }
 
   .text-white\/40, .text-white\/30 {
-    @apply text-white\/60;
+    @apply text-white/60;
   }
 
   /* Melhorar foco em inputs e botões para acessibilidade */
   input:focus, select:focus, textarea:focus {
-    @apply outline-none ring-2 ring-gold\/20 ring-offset-2 ring-offset-cream;
+    @apply outline-none ring-2 ring-gold/20 ring-offset-2 ring-offset-cream;
   }
 
   button:focus-visible {
