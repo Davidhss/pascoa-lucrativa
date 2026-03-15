@@ -55,7 +55,7 @@ export function Pricing() {
         <h2 className="text-4xl md:text-6xl font-serif italic font-light tracking-tight text-chocolate">
           Calculadora de <span className="font-bold not-italic">Lucro</span>
         </h2>
-        <p className="text-gold-dark font-bold uppercase tracking-[0.3em] text-xs">
+        <p className="text-gold font-bold uppercase tracking-[0.3em] text-xs">
           Aprenda a cobrar o preço justo e valorize seu trabalho
         </p>
       </header>
@@ -73,18 +73,18 @@ export function Pricing() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-1">Nome do Ingrediente</label>
+                <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-1">Nome do Ingrediente</label>
                 <input 
                   type="text"
                   placeholder="Ex: Chocolate Belga"
                   value={newItem.name}
                   onChange={e => setNewItem({ ...newItem, name: e.target.value })}
-                  className="w-full bg-paper border-none rounded-2xl px-6 py-4 text-chocolate font-bold placeholder:text-chocolate/20 focus:ring-2 focus:ring-gold/20 transition-all"
+                  className="w-full bg-paper border-none rounded-2xl px-6 py-4 text-chocolate font-bold placeholder:text-chocolate/40 focus:ring-2 focus:ring-gold/20 transition-all"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-1">Preço Pago</label>
+                  <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-1">Preço Pago</label>
                   <input 
                     type="number"
                     placeholder="R$ 0,00"
@@ -94,7 +94,7 @@ export function Pricing() {
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-1">Qtd Comprada</label>
+                  <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-1">Qtd Comprada</label>
                   <div className="flex gap-2">
                     <input 
                       type="number"
@@ -116,7 +116,7 @@ export function Pricing() {
                 </div>
               </div>
               <div className="md:col-span-2 space-y-1.5">
-                <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-1">Quantidade Usada na Receita</label>
+                <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-1">Quantidade Usada na Receita</label>
                 <div className="flex gap-4">
                   <input 
                     type="number"
@@ -155,7 +155,7 @@ export function Pricing() {
                       </p>
                       <button 
                         onClick={() => removeIngredient(item.id)}
-                        className="p-2 text-chocolate/20 hover:text-red-500 transition-colors"
+                        className="p-2 text-chocolate/40 hover:text-red-500 transition-colors"
                       >
                         <Trash2 size={18} />
                       </button>
@@ -165,7 +165,7 @@ export function Pricing() {
               ) : (
                 <div className="text-center py-10 space-y-3">
                   <div className="text-4xl opacity-20">🥚</div>
-                  <p className="text-chocolate/30 font-bold uppercase tracking-widest text-[10px]">Nenhum ingrediente adicionado</p>
+                  <p className="text-chocolate/60 font-bold uppercase tracking-widest text-[10px]">Nenhum ingrediente adicionado</p>
                 </div>
               )}
             </div>
@@ -184,20 +184,20 @@ export function Pricing() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-sm text-white">
                   <span className="opacity-60 font-bold uppercase tracking-widest">Custo de Ingredientes</span>
                   <span className="font-black">{formatCurrency(totalIngredientsCost)}</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-sm text-white">
                   <span className="opacity-60 font-bold uppercase tracking-widest">Mão de Obra ({laborCost}%)</span>
                   <span className="font-black">{formatCurrency(laborValue)}</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-sm text-white">
                   <span className="opacity-60 font-bold uppercase tracking-widest">Outros Custos ({otherCosts}%)</span>
                   <span className="font-black">{formatCurrency(otherValue)}</span>
                 </div>
                 <div className="h-px bg-white/10 my-2" />
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center text-white">
                   <span className="text-gold font-black uppercase tracking-widest text-xs">Custo Total de Produção</span>
                   <span className="text-2xl font-black">{formatCurrency(baseCost)}</span>
                 </div>
@@ -205,7 +205,7 @@ export function Pricing() {
 
               <div className="pt-4 space-y-6">
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center text-white">
                     <label className="text-[10px] font-black text-gold uppercase tracking-widest">Margem de Lucro Desejada</label>
                     <span className="text-xl font-black">{profitMargin}%</span>
                   </div>
@@ -220,9 +220,9 @@ export function Pricing() {
                   />
                 </div>
 
-                <div className="bg-white/5 rounded-3xl p-6 border border-white/10 text-center space-y-2">
+                <div className="bg-white/5 rounded-3xl p-6 border border-white/10 text-center space-y-2 text-white">
                   <p className="text-[10px] font-black text-gold uppercase tracking-[0.2em]">Preço de Venda Sugerido</p>
-                  <p className="text-5xl font-black tracking-tighter">{formatCurrency(suggestedPrice)}</p>
+                  <p className="text-5xl font-black tracking-tighter text-white">{formatCurrency(suggestedPrice)}</p>
                   <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest">
                     Lucro Líquido: {formatCurrency(profitValue)}
                   </p>

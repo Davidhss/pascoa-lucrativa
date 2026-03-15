@@ -20,20 +20,19 @@
 
   /* Melhorar legibilidade geral */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-chocolate;
-  }
-
-  p, span, div, button, input, select, textarea {
-    @apply text-chocolate;
+    @apply font-bold;
   }
 
   /* Melhorar contraste para textos pequenos */
-  .text-chocolate\/30, .text-chocolate\/40, .text-chocolate\/50 {
-    @apply text-chocolate/60;
+  .text-chocolate\/20, .text-chocolate\/30 {
+    @apply text-chocolate/50;
+  }
+  .text-chocolate\/40 {
+    @apply text-chocolate/70;
   }
 
-  .text-white\/40, .text-white\/30 {
-    @apply text-white/60;
+  .text-white\/30, .text-white\/40 {
+    @apply text-white/70;
   }
 
   /* Melhorar foco em inputs e botões para acessibilidade */

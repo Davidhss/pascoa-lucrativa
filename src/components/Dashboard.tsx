@@ -85,7 +85,7 @@ export function Dashboard({
                 {getGreeting()} • Dashboard 2026
               </p>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-[-0.02em] lg:tracking-[-0.04em] leading-[1.15] drop-shadow-lg">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-[-0.02em] lg:tracking-[-0.04em] leading-[1.15] drop-shadow-lg text-white">
               Meta de <br />
               <span className="text-gold italic font-serif lowercase tracking-normal">Faturamento</span>
             </h1>
@@ -106,7 +106,7 @@ export function Dashboard({
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
-                  className="text-4xl lg:text-6xl font-black tracking-tight font-mono"
+                  className="text-4xl lg:text-6xl font-black tracking-tight font-mono text-white"
                 >
                   {Math.round(progress)}%
                 </motion.span>
@@ -146,7 +146,7 @@ export function Dashboard({
                 <p className="text-[9px] lg:text-[10px] font-mono font-bold text-white/70 uppercase tracking-[0.15em] lg:tracking-[0.2em]">
                   Dias
                 </p>
-                <p className="text-2xl lg:text-4xl font-black tracking-tight font-mono flex items-center gap-1 lg:gap-2">
+                <p className="text-2xl lg:text-4xl font-black tracking-tight font-mono flex items-center gap-1 lg:gap-2 text-white">
                   {daysLeft}
                   <span className="text-[9px] lg:text-[10px] font-serif italic text-white/60 lowercase">dias</span>
                 </p>
@@ -255,7 +255,7 @@ export function Dashboard({
               <h3 className="text-2xl lg:text-3xl font-black text-chocolate uppercase tracking-tight">
                 Pedidos Recentes
               </h3>
-              <p className="text-[10px] font-black text-gold-dark uppercase tracking-[0.2em] lg:tracking-[0.3em]">
+              <p className="text-[10px] font-black text-gold uppercase tracking-[0.2em] lg:tracking-[0.3em]">
                 Acompanhe suas últimas vendas
               </p>
             </div>
@@ -293,7 +293,7 @@ export function Dashboard({
                           {order.customerName}
                         </p>
                         <div className="flex items-center gap-2">
-                          <span className="px-2 py-0.5 bg-gold/10 text-gold-dark text-[9px] lg:text-[10px] font-black uppercase tracking-widest rounded-md">
+                          <span className="px-2 py-0.5 bg-gold/10 text-gold text-[9px] lg:text-[10px] font-black uppercase tracking-widest rounded-md">
                             {order.productName}
                           </span>
                           <span className="text-[10px] font-bold text-chocolate/60 uppercase tracking-widest whitespace-nowrap">
@@ -307,7 +307,7 @@ export function Dashboard({
                         <p className="text-base lg:text-lg font-black text-chocolate tracking-tight">
                           {formatCurrency(order.value)}
                         </p>
-                        <p className="text-[10px] font-bold text-gold-dark uppercase tracking-widest">
+                        <p className="text-[10px] font-bold text-gold uppercase tracking-widest">
                           {order.paymentStatus}
                         </p>
                       </div>
@@ -315,7 +315,7 @@ export function Dashboard({
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => onMarkAsDelivered(order.id)}
-                        className="w-10 h-10 lg:w-12 lg:h-12 bg-paper text-chocolate/30 hover:text-white hover:bg-green-500 rounded-xl lg:rounded-2xl transition-all flex items-center justify-center shadow-sm shrink-0"
+                        className="w-10 h-10 lg:w-12 lg:h-12 bg-paper text-chocolate/60 hover:text-white hover:bg-green-500 rounded-xl lg:rounded-2xl transition-all flex items-center justify-center shadow-sm shrink-0"
                         title="Marcar como entregue"
                       >
                         <CheckCircle2 size={18} lg:size={22} />
@@ -348,7 +348,7 @@ export function Dashboard({
             <h3 className="text-2xl lg:text-3xl font-black text-chocolate uppercase tracking-tight">
               Calendário
             </h3>
-            <p className="text-[10px] font-black text-gold-dark uppercase tracking-[0.2em] lg:tracking-[0.3em]">
+            <p className="text-[10px] font-black text-gold uppercase tracking-[0.2em] lg:tracking-[0.3em]">
               Datas importantes
             </p>
           </div>
@@ -408,7 +408,7 @@ export function Dashboard({
             transition={{ delay: 0.5 }}
             className="bg-white rounded-2xl lg:rounded-3xl border border-paper p-6 lg:p-8 space-y-4 shadow-lg"
           >
-            <p className="text-[10px] font-black text-gold-dark uppercase tracking-[0.2em] lg:tracking-[0.3em]">
+            <p className="text-[10px] font-black text-gold uppercase tracking-[0.2em] lg:tracking-[0.3em]">
               Ações Rápidas
             </p>
             <div className="space-y-3">
