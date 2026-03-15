@@ -64,7 +64,7 @@ export function Marketing() {
         <h2 className="text-4xl md:text-6xl font-serif italic font-light tracking-tight text-chocolate">
           Máquina de <span className="font-bold not-italic">Vendas</span>
         </h2>
-        <p className="text-gold-dark font-bold uppercase tracking-[0.3em] text-xs">
+        <p className="text-gold font-bold uppercase tracking-[0.3em] text-xs">
           Scripts e estratégias para vender sem esforço
         </p>
       </header>
@@ -84,7 +84,7 @@ export function Marketing() {
               "flex items-center gap-2 px-6 py-3 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all whitespace-nowrap",
               activeCategory === cat.id 
                 ? "bg-chocolate text-white shadow-lg shadow-chocolate/20" 
-                : "bg-white text-chocolate/40 border border-paper hover:border-gold/30"
+                : "bg-white text-chocolate/70 border border-paper hover:border-gold/30"
             )}
           >
             <cat.icon size={14} />
@@ -111,7 +111,7 @@ export function Marketing() {
                       onClick={() => copyToClipboard(script.content, script.id)}
                       className={cn(
                         "flex items-center gap-2 px-4 py-2 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all",
-                        copiedId === script.id ? "bg-green-500 text-white" : "bg-paper text-chocolate/40 hover:bg-chocolate hover:text-white"
+                        copiedId === script.id ? "bg-green-500 text-white" : "bg-paper text-chocolate/70 hover:bg-chocolate hover:text-white"
                       )}
                     >
                       {copiedId === script.id ? <Check size={14} /> : <Copy size={14} />}
@@ -133,7 +133,7 @@ export function Marketing() {
               >
                 <div className="space-y-2">
                   <h3 className="text-3xl font-black text-chocolate uppercase tracking-tighter">Estratégia de 21 Dias</h3>
-                  <p className="text-gold-dark font-bold uppercase tracking-widest text-xs">Como dominar o Instagram e lotar a agenda</p>
+                  <p className="text-gold font-bold uppercase tracking-widest text-xs">Como dominar o Instagram e lotar a agenda</p>
                 </div>
 
                 <div className="space-y-8">

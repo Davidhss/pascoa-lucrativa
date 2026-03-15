@@ -83,14 +83,14 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif italic font-light tracking-tight text-chocolate">
             Seu <span className="font-bold not-italic">Cardápio</span>
           </h2>
-          <p className="text-gold-dark font-black uppercase tracking-[0.2em] lg:tracking-[0.3em] text-xs">
+          <p className="text-gold font-black uppercase tracking-[0.2em] lg:tracking-[0.3em] text-xs">
             {RECIPES.length} receitas exclusivas para lucrar
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
           <div className="relative group flex-1 md:w-64">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/40 group-focus-within:text-gold transition-colors" size={18} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/70 group-focus-within:text-gold transition-colors" size={18} />
             <input
               type="text"
               placeholder="Buscar receita..."
@@ -101,7 +101,7 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
           </div>
 
           <div className="relative md:w-48">
-            <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/40" size={18} />
+            <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/70" size={18} />
             <select
               value={activeCategory}
               onChange={(e) => setActiveCategory(e.target.value as Category | 'Todos')}
@@ -177,7 +177,7 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
 
               <div className="flex items-center justify-between pt-4 border-t border-paper">
                 <div className="space-y-1">
-                  <p className="text-[10px] font-black text-gold-dark uppercase tracking-widest">Sugestão</p>
+                  <p className="text-[10px] font-black text-gold uppercase tracking-widest">Sugestão</p>
                   <p className="text-lg lg:text-xl font-black text-chocolate">{formatCurrency(recipe.suggestedPrice)}</p>
                 </div>
                 <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-paper flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all">
@@ -256,7 +256,7 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
               {/* Right: Content */}
               <div className="md:w-3/5 p-6 lg:p-12 overflow-y-auto scrollbar-hide space-y-6 lg:space-y-10">
                 <div className="space-y-3 lg:space-y-4">
-                  <h4 className="text-xs font-black text-gold-dark uppercase tracking-[0.2em] flex items-center gap-2">
+                  <h4 className="text-xs font-black text-gold uppercase tracking-[0.2em] flex items-center gap-2">
                     <Info size={14} /> Sobre a Receita
                   </h4>
                   <p className="text-base lg:text-lg text-chocolate/70 font-medium leading-relaxed italic font-serif">
@@ -266,21 +266,21 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
                   <div className="space-y-4 lg:space-y-6">
-                    <h4 className="text-xs font-black text-gold-dark uppercase tracking-[0.2em] flex items-center gap-2">
+                    <h4 className="text-xs font-black text-gold uppercase tracking-[0.2em] flex items-center gap-2">
                       <ChefHat size={14} /> Ingredientes
                     </h4>
                     <ul className="space-y-3 lg:space-y-4">
                       {selectedRecipe.ingredients.map((ing, i) => (
                         <li key={i} className="flex items-center justify-between group">
                           <span className="text-chocolate font-bold text-sm lg:text-base">{ing.item}</span>
-                          <span className="text-gold-dark font-black text-xs lg:text-sm bg-paper px-2 lg:px-3 py-1 rounded-full">{ing.amount}</span>
+                          <span className="text-gold font-black text-xs lg:text-sm bg-paper px-2 lg:px-3 py-1 rounded-full">{ing.amount}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="space-y-4 lg:space-y-6">
-                    <h4 className="text-xs font-black text-gold-dark uppercase tracking-[0.2em] flex items-center gap-2">
+                    <h4 className="text-xs font-black text-gold uppercase tracking-[0.2em] flex items-center gap-2">
                       <Clock size={14} /> Preparo
                     </h4>
                     <div className="space-y-3 lg:space-y-4">
@@ -298,7 +298,7 @@ export function Recipes({ onAddToMenu, favorites, onToggleFavorite }: RecipesPro
 
                 {selectedRecipe.tip && (
                   <div className="bg-paper rounded-2xl lg:rounded-3xl p-4 lg:p-8 border border-gold/10">
-                    <h4 className="text-xs font-black text-gold-dark uppercase tracking-[0.2em] mb-2 lg:mb-4 flex items-center gap-2">
+                    <h4 className="text-xs font-black text-gold uppercase tracking-[0.2em] mb-2 lg:mb-4 flex items-center gap-2">
                       <TrendingUp size={14} /> Dica de Ouro
                     </h4>
                     <p className="text-chocolate/70 font-medium italic text-xs lg:text-sm">

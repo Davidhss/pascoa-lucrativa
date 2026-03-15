@@ -48,7 +48,7 @@ export function Layout({ children, activeTab, setActiveTab, confectioneryName, o
             <h1 className="text-base lg:text-xl font-black tracking-tighter uppercase leading-none">
               Páscoa <span className="text-gold">Lucrativa</span>
             </h1>
-            <p className="text-[9px] lg:text-[10px] font-bold text-gold-dark tracking-[0.15em] uppercase mt-0.5">
+            <p className="text-[9px] lg:text-[10px] font-bold text-gold tracking-[0.15em] uppercase mt-0.5">
               {confectioneryName || 'Sua Confeitaria'}
             </p>
           </div>
@@ -76,14 +76,14 @@ export function Layout({ children, activeTab, setActiveTab, confectioneryName, o
         <div className="flex items-center gap-1">
           <button
             onClick={onReset}
-            className="p-2 lg:p-3 text-chocolate/40 hover:text-red-500 hover:bg-red-50 rounded-xl lg:rounded-2xl transition-all duration-300"
+            className="p-2 lg:p-3 text-chocolate/70 hover:text-red-500 hover:bg-red-50 rounded-xl lg:rounded-2xl transition-all duration-300"
             title="Configurações"
           >
             <Settings size={18} lg:size={20} />
           </button>
           <button
             onClick={() => supabase.auth.signOut()}
-            className="p-2 lg:p-3 text-chocolate/40 hover:text-red-500 hover:bg-red-50 rounded-xl lg:rounded-2xl transition-all duration-300"
+            className="p-2 lg:p-3 text-chocolate/70 hover:text-red-500 hover:bg-red-50 rounded-xl lg:rounded-2xl transition-all duration-300"
             title="Sair"
           >
             <LogOut size={18} lg:size={20} />

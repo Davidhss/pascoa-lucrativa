@@ -128,7 +128,7 @@ export function Finance({
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif italic font-light tracking-tight text-chocolate">
             Seu <span className="font-bold not-italic">Financeiro</span>
           </h2>
-          <p className="text-gold-dark font-black uppercase tracking-[0.2em] lg:tracking-[0.3em] text-xs">
+          <p className="text-gold font-black uppercase tracking-[0.2em] lg:tracking-[0.3em] text-xs">
             Visão clara dos seus lucros e investimentos
           </p>
         </div>
@@ -220,7 +220,7 @@ export function Finance({
             </ResponsiveContainer>
           </div>
           <h4 className="text-xl font-black text-chocolate uppercase tracking-tighter">Distribuição</h4>
-          <p className="text-sm text-chocolate/40 font-medium">Equilíbrio entre custos e ganhos</p>
+          <p className="text-sm text-chocolate/70 font-medium">Equilíbrio entre custos e ganhos</p>
         </motion.div>
       </div>
 
@@ -233,11 +233,11 @@ export function Finance({
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-gold" />
-                <span className="text-[10px] font-black text-chocolate/40 uppercase tracking-widest">Receita</span>
+                <span className="text-[10px] font-black text-chocolate/70 uppercase tracking-widest">Receita</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-chocolate" />
-                <span className="text-[10px] font-black text-chocolate/40 uppercase tracking-widest">Custos</span>
+                <span className="text-[10px] font-black text-chocolate/70 uppercase tracking-widest">Custos</span>
               </div>
             </div>
           </div>
@@ -298,7 +298,7 @@ export function Finance({
                       </div>
                       <div>
                         <p className="font-black text-chocolate leading-tight">{cost.description}</p>
-                        <p className="text-[10px] font-bold text-chocolate/30 uppercase tracking-widest">{cost.category}</p>
+                        <p className="text-[10px] font-bold text-chocolate/60 uppercase tracking-widest">{cost.category}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -315,7 +315,7 @@ export function Finance({
               ) : (
                 <div className="py-10 text-center space-y-2">
                   <p className="text-4xl">📉</p>
-                  <p className="text-xs font-black text-chocolate/30 uppercase tracking-widest">Nenhum custo registrado</p>
+                  <p className="text-xs font-black text-chocolate/60 uppercase tracking-widest">Nenhum custo registrado</p>
                 </div>
               )}
             </div>
@@ -338,7 +338,7 @@ export function Finance({
                       </div>
                       <div>
                         <p className="font-black text-chocolate leading-tight">{order.customerName}</p>
-                        <p className="text-[10px] font-bold text-chocolate/30 uppercase tracking-widest">{order.productName}</p>
+                        <p className="text-[10px] font-bold text-chocolate/60 uppercase tracking-widest">{order.productName}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -355,7 +355,7 @@ export function Finance({
               ) : (
                 <div className="py-10 text-center space-y-2">
                   <p className="text-4xl">✨</p>
-                  <p className="text-xs font-black text-chocolate/30 uppercase tracking-widest">Tudo em dia!</p>
+                  <p className="text-xs font-black text-chocolate/60 uppercase tracking-widest">Tudo em dia!</p>
                 </div>
               )}
             </div>
@@ -388,7 +388,7 @@ export function Finance({
                 </div>
                 <button 
                   onClick={() => setIsCostModalOpen(false)}
-                  className="w-12 h-12 rounded-full bg-paper text-chocolate/30 hover:text-chocolate transition-all flex items-center justify-center"
+                  className="w-12 h-12 rounded-full bg-paper text-chocolate/60 hover:text-chocolate transition-all flex items-center justify-center"
                 >
                   <X size={24} />
                 </button>
@@ -396,7 +396,7 @@ export function Finance({
 
               <form onSubmit={handleAddCost} className="space-y-8">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-4">Descrição</label>
+                  <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-4">Descrição</label>
                   <input 
                     required
                     type="text"
@@ -409,7 +409,7 @@ export function Finance({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-4">Categoria</label>
+                    <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-4">Categoria</label>
                     <select 
                       value={costForm.category}
                       onChange={(e) => setCostForm({...costForm, category: e.target.value as CostCategory})}
@@ -421,7 +421,7 @@ export function Finance({
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-4">Valor (R$)</label>
+                    <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-4">Valor (R$)</label>
                     <input 
                       required
                       type="number"

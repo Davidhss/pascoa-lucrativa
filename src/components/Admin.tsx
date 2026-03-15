@@ -274,7 +274,7 @@ export function Admin({ onLogout }: AdminProps) {
             <TrendingUp size={20} className="text-green-500" />
           </div>
           <div className="space-y-1">
-            <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Total de Usuários</p>
+            <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Total de Usuários</p>
             <p className="text-3xl lg:text-4xl font-black text-chocolate tracking-tighter">{stats.totalUsers}</p>
           </div>
         </motion.div>
@@ -288,7 +288,7 @@ export function Admin({ onLogout }: AdminProps) {
             <CheckCircle2 size={20} className="text-gold" />
           </div>
           <div className="space-y-1">
-            <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Usuários Ativos</p>
+            <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Usuários Ativos</p>
             <p className="text-3xl lg:text-4xl font-black text-chocolate tracking-tighter">{stats.activeUsers}</p>
           </div>
         </motion.div>
@@ -302,7 +302,7 @@ export function Admin({ onLogout }: AdminProps) {
             <DollarSign size={20} className="text-green-500" />
           </div>
           <div className="space-y-1">
-            <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Pedidos Totais</p>
+            <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Pedidos Totais</p>
             <p className="text-3xl lg:text-4xl font-black text-chocolate tracking-tighter">{stats.totalOrders}</p>
           </div>
         </motion.div>
@@ -327,7 +327,7 @@ export function Admin({ onLogout }: AdminProps) {
       {/* Search and Filter */}
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/40" size={20} />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-chocolate/70" size={20} />
           <input
             type="text"
             placeholder="Buscar por email, nome ou confeitaria..."
@@ -419,7 +419,7 @@ export function Admin({ onLogout }: AdminProps) {
                     <Calendar size={12} />
                     {format(new Date(user.created_at), 'dd/MM/yyyy', { locale: ptBR })}
                   </p>
-                  <p className="text-[10px] text-chocolate/40 font-mono">
+                  <p className="text-[10px] text-chocolate/70 font-mono">
                     {formatDistanceToNow(new Date(user.created_at), { addSuffix: true, locale: ptBR })}
                   </p>
                 </div>
@@ -475,7 +475,7 @@ export function Admin({ onLogout }: AdminProps) {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Email</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Email</p>
                     <p className="text-base font-medium text-chocolate flex items-center gap-2">
                       <Mail size={16} className="text-gold" />
                       {selectedUser.email}
@@ -483,14 +483,14 @@ export function Admin({ onLogout }: AdminProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Nome Completo</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Nome Completo</p>
                     <p className="text-base font-medium text-chocolate">
                       {selectedUser.full_name || 'Não definido'}
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Confeitaria</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Confeitaria</p>
                     <p className="text-base font-medium text-chocolate flex items-center gap-2">
                       <Building2 size={16} className="text-gold" />
                       {selectedUser.confectionery_name || 'Não definido'}
@@ -498,7 +498,7 @@ export function Admin({ onLogout }: AdminProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">ID do Usuário</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">ID do Usuário</p>
                     <p className="text-sm font-mono text-chocolate/60 truncate">
                       {selectedUser.id}
                     </p>
@@ -507,7 +507,7 @@ export function Admin({ onLogout }: AdminProps) {
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Data de Cadastro</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Data de Cadastro</p>
                     <p className="text-base font-medium text-chocolate flex items-center gap-2">
                       <Calendar size={16} className="text-gold" />
                       {format(new Date(selectedUser.created_at), 'dd/MM/yyyy HH:mm', { locale: ptBR })}
@@ -515,7 +515,7 @@ export function Admin({ onLogout }: AdminProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Último Acesso</p>
+                    <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Último Acesso</p>
                     {selectedUser.last_sign_in_at ? (
                       <p className="text-base font-medium text-chocolate flex items-center gap-2">
                         <CheckCircle2 size={16} className="text-green-500" />
@@ -650,7 +650,7 @@ export function Admin({ onLogout }: AdminProps) {
 
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Nova Senha</label>
+                  <label className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Nova Senha</label>
                   <input
                     type="password"
                     value={newPassword}

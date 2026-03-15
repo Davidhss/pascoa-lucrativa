@@ -100,7 +100,7 @@ export function MenuCreator() {
         <h2 className="text-4xl md:text-6xl font-serif italic font-light tracking-tight text-chocolate">
           Criador de <span className="font-bold not-italic">Cardápio</span>
         </h2>
-        <p className="text-gold-dark font-bold uppercase tracking-[0.3em] text-xs">
+        <p className="text-gold font-bold uppercase tracking-[0.3em] text-xs">
           Personalize sua vitrine e encante seus clientes
         </p>
       </header>
@@ -110,7 +110,7 @@ export function MenuCreator() {
         <div className="lg:col-span-8 space-y-6">
           <div className="bg-white rounded-[40px] p-8 border border-paper shadow-xl space-y-8">
             <div className="space-y-4">
-              <label className="text-[10px] font-black text-gold-dark uppercase tracking-widest ml-1">Título do Cardápio</label>
+              <label className="text-[10px] font-black text-gold uppercase tracking-widest ml-1">Título do Cardápio</label>
               <div className="flex gap-4">
                 <input 
                   type="text"
@@ -125,7 +125,7 @@ export function MenuCreator() {
                       onClick={() => setTheme(t)}
                       className={cn(
                         "w-12 h-12 rounded-2xl flex items-center justify-center transition-all border-2",
-                        theme === t ? "border-gold bg-gold/10 text-gold" : "border-paper bg-paper text-chocolate/20"
+                        theme === t ? "border-gold bg-gold/10 text-gold" : "border-paper bg-paper text-chocolate/40"
                       )}
                     >
                       <Palette size={20} />
@@ -167,7 +167,7 @@ export function MenuCreator() {
                       
                       <div className="flex items-center gap-6">
                         <div className="space-y-1">
-                          <label className="text-[9px] font-black text-gold-dark uppercase tracking-widest block text-right">Preço de Venda</label>
+                          <label className="text-[9px] font-black text-gold uppercase tracking-widest block text-right">Preço de Venda</label>
                           <input 
                             type="number"
                             value={item.customPrice}
@@ -177,7 +177,7 @@ export function MenuCreator() {
                         </div>
                         <button 
                           onClick={() => removeItem(item.id)}
-                          className="p-3 text-chocolate/20 hover:text-red-500 transition-colors"
+                          className="p-3 text-chocolate/40 hover:text-red-500 transition-colors"
                         >
                           <Trash2 size={20} />
                         </button>
@@ -187,7 +187,7 @@ export function MenuCreator() {
                 ) : (
                   <div className="text-center py-20 border-2 border-dashed border-paper rounded-[40px] space-y-4">
                     <div className="text-6xl opacity-10">📖</div>
-                    <p className="text-chocolate/30 font-bold uppercase tracking-widest text-xs">Seu cardápio está vazio</p>
+                    <p className="text-chocolate/60 font-bold uppercase tracking-widest text-xs">Seu cardápio está vazio</p>
                     <button 
                       onClick={() => setIsAdding(true)}
                       className="text-gold font-black uppercase tracking-widest text-[10px] hover:underline"
@@ -225,7 +225,7 @@ export function MenuCreator() {
             </div>
 
             <div className="pt-6 border-top border-paper space-y-4">
-              <h4 className="text-[10px] font-black text-gold-dark uppercase tracking-widest">Dicas de Design</h4>
+              <h4 className="text-[10px] font-black text-gold uppercase tracking-widest">Dicas de Design</h4>
               <div className="space-y-3">
                 {[
                   { icon: LayoutIcon, text: "Mantenha entre 5 e 10 itens para não confundir o cliente." },
@@ -262,7 +262,7 @@ export function MenuCreator() {
             >
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-2xl font-black text-chocolate uppercase tracking-tighter">Escolha suas Receitas</h3>
-                <button onClick={() => setIsAdding(false)} className="text-chocolate/30 hover:text-chocolate font-black uppercase tracking-widest text-[10px]">Fechar</button>
+                <button onClick={() => setIsAdding(false)} className="text-chocolate/60 hover:text-chocolate font-black uppercase tracking-widest text-[10px]">Fechar</button>
               </div>
 
               <div className="flex-1 overflow-y-auto pr-2 space-y-3">

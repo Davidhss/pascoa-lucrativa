@@ -190,7 +190,7 @@ export function Orders({
 
           {/* Busca */}
           <div className="relative flex-1 lg:flex-none lg:w-80">
-            <Search className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 text-chocolate/40" size={18} />
+            <Search className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 text-chocolate/70" size={18} />
             <input
               type="text"
               placeholder="Buscar por nome ou produto..."
@@ -223,7 +223,7 @@ export function Orders({
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-2xl lg:rounded-3xl border border-paper p-8 lg:p-16 text-center space-y-6 lg:space-y-8"
         >
-          <div className="w-16 h-16 lg:w-20 lg:h-20 bg-paper rounded-full flex items-center justify-center mx-auto text-chocolate/20 mb-4">
+          <div className="w-16 h-16 lg:w-20 lg:h-20 bg-paper rounded-full flex items-center justify-center mx-auto text-chocolate/70 mb-4">
             <Package size={32} lg:size={40} />
           </div>
           <div className="space-y-2">
@@ -311,7 +311,7 @@ export function Orders({
 
                     {/* Detalhes do Produto */}
                     <div className="flex items-center gap-2 lg:gap-3 text-sm">
-                      <span className="px-2 lg:px-3 py-0.5 bg-gold/10 text-gold-dark text-[9px] lg:text-[10px] font-bold uppercase tracking-wider rounded-md">
+                      <span className="px-2 lg:px-3 py-0.5 bg-gold/10 text-gold text-[9px] lg:text-[10px] font-bold uppercase tracking-wider rounded-md">
                         {order.productName}
                       </span>
                       <span className="text-chocolate/60 font-semibold">
@@ -327,7 +327,7 @@ export function Orders({
                     </p>
                     <div className="flex items-center justify-end gap-1 mt-1">
                       {getPaymentInfo(order.paymentStatus).icon}
-                      <span className="text-[10px] lg:text-xs font-bold text-chocolate/40 uppercase tracking-widest">
+                      <span className="text-[10px] lg:text-xs font-bold text-chocolate/70 uppercase tracking-widest">
                         {getPaymentInfo(order.paymentStatus).label}
                       </span>
                     </div>
@@ -348,7 +348,7 @@ export function Orders({
                       )}>
                         {format(parseISO(order.deliveryDate), "dd MMM", { locale: ptBR })}
                       </span>
-                      <span className="text-xs text-chocolate/40">
+                      <span className="text-xs text-chocolate/70">
                         ({getUrgencyLevel(order.deliveryDate).message})
                       </span>
                     </div>
@@ -457,7 +457,7 @@ export function Orders({
                         placeholder="Ex: Maria Silva"
                         value={formData.customerName}
                         onChange={(e) => setFormData({ ...formData, customerName: e.target.value })}
-                        className="w-full pl-10 pr-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl"
+                        className="w-full pl-10 pr-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl"
                       />
                     </div>
                   </div>
@@ -472,7 +472,7 @@ export function Orders({
                         placeholder="Ex: (11) 99999-9999"
                         value={formData.customerWhatsapp}
                         onChange={(e) => setFormData({ ...formData, customerWhatsapp: e.target.value })}
-                        className="w-full pl-10 pr-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl"
+                        className="w-full pl-10 pr-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl"
                       />
                     </div>
                   </div>
@@ -564,7 +564,7 @@ export function Orders({
                     onChange={(e) => setFormData({ ...formData, observations: e.target.value })}
                     placeholder="Adicione detalhes especiais ou observações..."
                     rows={2}
-                    className="w-full px-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl resize-none"
+                    className="w-full px-4 py-3 bg-paper border-2 border-paper/20 focus:border-gold focus:outline-none font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl resize-none"
                   />
                 </div>
               </div>
@@ -652,11 +652,11 @@ export function Orders({
 
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Produto</p>
+                  <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Produto</p>
                   <p className="text-base font-semibold text-chocolate">{selectedOrder.productName}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Valor</p>
+                  <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Valor</p>
                   <p className="text-2xl font-black text-chocolate tracking-tight">{formatCurrency(selectedOrder.value)}</p>
                 </div>
               </div>
@@ -707,21 +707,21 @@ export function Orders({
             <div className="bg-white p-4 lg:p-6 rounded-xl border-2 border-paper space-y-4 mb-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Data de Entrega</p>
+                  <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Data de Entrega</p>
                   <p className="text-base font-semibold text-chocolate flex items-center gap-2">
                     <Calendar size={16} className="text-gold" />
                     {format(parseISO(selectedOrder.deliveryDate), "dd 'de' MMMM 'de' yyyy", { locale: ptBR })}
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest">Prazo</p>
+                  <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest">Prazo</p>
                   <p className="text-base font-semibold text-chocolate">{selectedOrder.size}</p>
                 </div>
               </div>
 
               {selectedOrder.observations && (
                 <div>
-                  <p className="text-[10px] font-mono font-bold text-chocolate/40 uppercase tracking-widest ml-1">Observações</p>
+                  <p className="text-[10px] font-mono font-bold text-chocolate/70 uppercase tracking-widest ml-1">Observações</p>
                   <p className="text-sm text-chocolate/80 italic bg-paper p-3 rounded-lg">
                     "{selectedOrder.observations}"
                   </p>

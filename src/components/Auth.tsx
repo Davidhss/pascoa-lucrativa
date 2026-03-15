@@ -218,7 +218,7 @@ export function Auth({ onAuthSuccess, onAdminAccess }: AuthProps) {
                         placeholder="Seu nome completo"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl transition-all"
+                        className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl transition-all"
                       />
                     </div>
                   </div>
@@ -232,7 +232,7 @@ export function Auth({ onAuthSuccess, onAdminAccess }: AuthProps) {
                         placeholder="Nome do seu negócio"
                         value={confectioneryName}
                         onChange={(e) => setConfectioneryName(e.target.value)}
-                        className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl transition-all"
+                        className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl transition-all"
                       />
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export function Auth({ onAuthSuccess, onAdminAccess }: AuthProps) {
                     placeholder="seu@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl transition-all"
+                    className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl transition-all"
                   />
                 </div>
               </div>
@@ -264,7 +264,7 @@ export function Auth({ onAuthSuccess, onAdminAccess }: AuthProps) {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/30 rounded-xl transition-all"
+                    className="w-full pl-12 pr-4 py-4 bg-white border-2 border-chocolate/10 focus:border-gold font-sans font-semibold text-chocolate placeholder:text-chocolate/60 rounded-xl transition-all"
                   />
                 </div>
               </div>
